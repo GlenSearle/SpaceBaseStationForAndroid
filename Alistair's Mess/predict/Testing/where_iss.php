@@ -36,8 +36,8 @@ $sat     = new Predict_Sat($tle); // Load up the satellite data
 $now     = Predict_Time::get_current_daynum(); // get the current time as Julian Date (daynum)
 
 // Get the passes and filter visible passes
-//$results  = $predict->get_passes($sat, $qth, $now, 1) ;
-//print_r( $filtered = $predict->filterVisiblePasses($results) );
+$results  = $predict->get_passes($sat, $qth, $now, 1) ;
+print_r( $filtered = $predict->filterVisiblePasses($results) );
 //die();
 
 // Get the time, but use time() function for testing
