@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Base Station</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style media="screen" type="text/css">
+        body {  
+        padding-top: 20px;  
+        padding-bottom: 20px;  
+        padding-left: 20px;
+        padding-right: 20px;
+        }  
+    </style>
+  </head>
+  <body>
+
+<div class="text-center">
+<img src=img/dish.png width=100px>
+<h2>Satellite Base Station</h2>
+<h4>Available Satellites</h4>
+<p>Select a satellite to begin tracking</p>
+</div>
+
+<table id="myTable" class="table tablesorter">
+<thead>
+<tr>
+<th>Satellite</th>
+<th>Visible From</th>
+<th>Visible To</th>
+<th>Total Time</th>
+<th>Cost/MB</th>
+</tr>
+</thead>
+<tbody>
+  <!-- Real data goes here -->
+  <tr><td><a href="#select1">Iridium 30</a></td><td>12:05</td><td>12:25</td><td>20</td><td>2</td></tr>
+  <tr><td><a href="#select2">Globalstar 2</a></td><td>12:18</td><td>12:30</td><td>12</td><td>1.5</td></tr>
+  <tr><td><a href="#select3">Telsat 3</a></td><td>12:26</td><td>12:40</td><td>14</td><td>2.5</td></tr>
+</tbody>
+</table>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(function(){
+            $("#myTable").tablesorter();
+            });
+          });
+    </script>
+</body>
+</html>
