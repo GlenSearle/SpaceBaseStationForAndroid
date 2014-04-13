@@ -89,7 +89,7 @@ while (isset($tleFile[$lineCounter+2])) {
 
 		include_once('geofunc.php');
 		$theAzimuth = calcAzimuth($qth->lat, $qth->lon, $theLat, $theLon);
-		$theElevation = 20;
+		$theElevation = calcAltitude($qth->lat, $qth->lon, 6371, $theLat, $theLon, 6371+$sat->alt );
 
 		if ($theLon > 180) {
 			$theLon -= 360;
@@ -109,8 +109,7 @@ sort($resultsArray);
 // Save the file to sebd to the Aerduino
 if (isset($resultsArray[0])) {
 	$destSat = explode(',', $resultsArray[0]);
-//	file_put_contents( 'command.txt', round($destSat[3], 2) .",". round($destSat[4], 2) . "\n" );
-	file_put_contents( 'command.txt', round($destSat[3], 2) . "\n" );
+	file_put_contents( 'command.txt', "GA " . round($destSat[3], 2) . "\nGO " . round($destSat[4], 2) . "\n" );
 }
 
 
