@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Base Station</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style media="screen" type="text/css">
+        body {  
+          padding-top: 20px;  
+          padding-bottom: 20px;  
+          padding-left: 20px;
+          padding-right: 20px;
+        }  
+    </style>
+  </head>
+  <body>
+
+  <div class="text-center">
+    <img src=img/dish.png width=50px>
+    <h2>Android Base Station</h2>
+    <h4>Connection Preferences</h4>
+    <p>Choose your connection cost, speed, and duration to configure the satellite tracker</p>
+  </div>
+
+  <form class="form-horizontal" name="calc" action="result.html" method="post">
+  <fieldset>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="cost">Cost</label>  
+    <div class="col-md-4">
+    <input id="cost" name="cost" placeholder="" class="form-control input-md" type="text">
+    <span class="help-block">(Dollars)</span>  
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="speed">Speed</label>  
+    <div class="col-md-4">
+    <input id="speed" name="speed" placeholder="" class="form-control input-md" type="text">
+    <span class="help-block">(MB/s)</span>  
+  </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="time">Duration</label>  
+    <div class="col-md-4">
+    <input id="time" name="time" placeholder="" class="form-control input-md" type="text">
+    <span class="help-block">(minutes)</span>  
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="search"></label>
+    <div class="col-md-4">
+      <button id="search" name="search" class="btn btn-primary">Search</button>
+    </div>
+  </div>
+
+  </fieldset>
+  </form>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </body>
+</html>

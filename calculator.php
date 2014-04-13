@@ -1,5 +1,4 @@
 <?php
-include 'phppredict.php';
 
 // php script to calculate optimum satellite choice for a given time, data requirement and cost
 
@@ -11,6 +10,8 @@ include 'phppredict.php';
 
 $file_loc='satellites.txt';
 $satfile= file($file_loc);
+
+function parseSatellites ($satelliteList){
 
 $count=0;
 $set=0;
@@ -45,6 +46,7 @@ foreach($satfile as $lines)
 	}else{
 		echo 'error';
 	}
+}
 }	
 
 echo 'finished reading ';
